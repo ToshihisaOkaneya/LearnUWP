@@ -1,4 +1,6 @@
-﻿using Windows.System;
+﻿using System;
+using System.Linq;
+using Windows.System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
@@ -67,6 +69,23 @@ namespace LearnUWP
                 }
             }
             return navigated;
+        }
+
+        private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
+        {
+            //TODO: Add setting page if necessary.
+            var item = sender.MenuItems.OfType<NavigationViewItem>().First(x => (string)x.Content == (string)args.InvokedItem);
+            NavView_Navigate(item as NavigationViewItem);
+        }
+
+        private void NavView_Navigate(NavigationViewItem item)
+        {
+            switch (item.Tag)
+            {
+                case "library":
+                    ContentFrame.Navigate(typeof(LibraryPage));
+                    break;
+            }
         }
     }
 }

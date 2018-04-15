@@ -7,6 +7,7 @@
     mc:Ignorable="d">
 
     <NavigationView x:Name="NavView"
+                    ItemInvoked="NavView_ItemInvoked"
                     Loaded="NavView_Loaded">
 
         <NavigationView.MenuItems>
@@ -17,7 +18,7 @@
             </NavigationViewItem>
             <NavigationViewItemSeparator/>
             <NavigationViewItemHeader Content="Main pages"/>
-            <NavigationViewItem x:Uid="AppsNavItem" Icon="AllApps" Content="Apps" Tag="apps"/>
+            <NavigationViewItem x:Uid="LibraryNavItem" Icon="Library" Content="Library" Tag="library"/>
             <NavigationViewItem x:Uid="GamesNavItem" Icon="Video" Content="Games" Tag="games"/>
             <NavigationViewItem x:Uid="MusicNavItem" Icon="Audio" Content="Music" Tag="music"/>
             <NavigationViewItem x:Uid="NetworkNavItem" Content="Network" Tag="network">
