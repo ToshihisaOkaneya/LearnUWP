@@ -20,7 +20,11 @@
             <NavigationViewItemHeader Content="Main pages"/>
             <NavigationViewItem x:Uid="LibraryNavItem" Icon="Library" Content="Library" Tag="library"/>
             <NavigationViewItem x:Uid="GamesNavItem" Icon="Video" Content="Games" Tag="games"/>
-            <NavigationViewItem x:Uid="MusicNavItem" Icon="Audio" Content="Music" Tag="music"/>
+            <NavigationViewItem x:Uid="PCListNavItem" Content="PCList" Tag="PCList">
+                <NavigationViewItem.Icon>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEC4E;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
             <NavigationViewItem x:Uid="NetworkNavItem" Content="Network" Tag="network">
                 <NavigationViewItem.Icon>
                     <FontIcon Glyph="&#xE701;"/>

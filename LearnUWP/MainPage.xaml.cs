@@ -85,6 +85,9 @@ namespace LearnUWP
                 case "library":
                     ContentFrame.Navigate(typeof(LibraryPage));
                     break;
+                case "PCList":
+                    ContentFrame.Navigate(typeof(PCListPage));
+                    break;
             }
         }
     }
